@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #252542);
+  color: white;
+}
+
+/* Navbar */
+nav {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #ff7eb3;
+}
+
+/* Sections */
+.text-center {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff8c00, #ff2a6d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+p, li {
+  font-size: 1.2rem;
+  color: #c7c7dd;
+}
+
+/* Project List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
