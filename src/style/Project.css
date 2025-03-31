@@ -1,0 +1,90 @@
+.projects-section {
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  min-height: 100vh; /* Ensures it covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+}
+
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .title span {
+    color: #b26efc;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: #ccc;
+  }
+  
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .projects-section {
+    height: 100vh;
+}
+
+  
+  .btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .github {
+    background: #6e5494;
+    color: white;
+  }
+  
+  .demo {
+    background: #b26efc;
+    color: white;
+  }
+  
+  .github:hover, .demo:hover {
+    opacity: 0.8;
+  }
+  

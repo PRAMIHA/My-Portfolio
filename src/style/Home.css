@@ -1,0 +1,102 @@
+/* Home.css */
+.home-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #090909, #1b1b3a);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating Background Elements */
+.home-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.content {
+  z-index: 2;
+  max-width: 600px;
+}
+
+.greeting {
+  font-size: 2rem;
+}
+
+.wave {
+  animation: wave-animation 2s infinite;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0); }
+  50% { transform: rotate(20deg); }
+  100% { transform: rotate(0); }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.typing-text {
+  font-size: 1.8rem;
+  color: #a566ff;
+}
+
+.highlight {
+  color: #a566ff;
+}
+
+/* Call-To-Action Button */
+.cta-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background: #ff5733;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5);
+}
+
+.cta-button:hover {
+  background: #ff2e00;
+  transform: scale(1.05);
+}
+
+/* Developer Image */
+.image-container {
+  z-index: 2;
+}
+
+.dev-image {
+  width: 400px;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

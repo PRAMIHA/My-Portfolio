@@ -1,0 +1,69 @@
+/* Ensure full-screen layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Ensure it covers the whole page */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh; /* Ensures it covers full height */
+  background-image: url("../assets/bgp.avif");
+  background-size: cover; /* Makes sure it covers the full area */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* Ensure content fills the space */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 100vh; /* Makes sure it fills the container */
+}
+
+/* Text section styling */
+.text-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Image styling */
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Download CV button */
+.cv-button {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.cv-button:hover {
+  transform: scale(1.1);
+}
+
+
