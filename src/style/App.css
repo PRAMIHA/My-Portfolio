@@ -1,69 +1,119 @@
-/* Ensure full-screen layout */
+/* Resetting margin and padding for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  width: 100%;
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-x: hidden;
 }
 
-.home-container {
+/* App container */
+.app {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute; /* Ensure it covers the whole page */
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+/* Background image styling */
+.background-overlay {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  min-height: 100vh; /* Ensures it covers full height */
-  background-image: url("../assets/bgp.avif");
-  background-size: cover; /* Makes sure it covers the full area */
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/bgp.avif'); /* Update path to go one level up */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  opacity: 0.7;
+  z-index: -1;
 }
 
-/* Ensure content fills the space */
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for navbar */
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Navbar links styling */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);  /* Hover effect */
+  border-radius: 5px;
+}
+
+/* Content container */
 .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  min-height: 100vh; /* Makes sure it fills the container */
+  padding-top: 60px; /* Offset the content to avoid overlap with navbar */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background to improve content readability */
 }
 
-/* Text section styling */
-.text-section {
-  flex: 1;
-  padding: 20px;
+/* Page Section Styles (for each page) */
+.home, .about, .projects, .contact {
+  padding: 50px;
+  text-align: center;
 }
 
-/* Image styling */
-.image-section img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+h1, h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-/* Download CV button */
-.cv-button {
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
-  border-radius: 8px;
-  color: white;
-  font-size: 1.2rem;
-  transition: 0.3s;
-  cursor: pointer;
-  border: none;
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-.cv-button:hover {
-  transform: scale(1.1);
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 1em;
+  }
+
+  .navbar a {
+    padding: 8px 15px;
+    margin: 0 8px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }
-
-

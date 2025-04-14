@@ -1,40 +1,26 @@
 import React from "react";
 import "../style/Home.css";
-import developerImg from "../assets/developer.png"; // Add an appropriate developer illustration
-import { TypeAnimation } from "react-type-animation";
+import profileImg from "../assets/developer.png";
+import resumeFile from "../assets/resume.pdf"; // Import your PDF
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="content">
-        <h2 className="greeting">
-          Hi There! <span className="wave">👋</span>
+    <section className="home-container">
+      <div className="text-content">
+        <h1>Hi There! 👋</h1>
+        <h2>
+          I'M <span>PRAMIHA</span>
         </h2>
-        <h1>
-          I'M <span className="highlight">PRAMIHA</span>
-        </h1>
-        <h2 className="typing-text">
-          <TypeAnimation
-            sequence={[
-              "MERN Stack Developer",
-              2000,
-              "Full-Stack Developer",
-              2000,
-              "React Enthusiast",
-              2000,
-            ]}
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
-          />
-        </h2>
-        <button className="cta-button">Download Resume</button>
+        <p>React Enthusiast</p>
+        <a href={resumeFile} download className="resume-btn">
+          Download Resume
+        </a>
       </div>
 
-      <div className="image-container">
-        <img src={developerImg} alt="Developer Illustration" className="dev-image" />
+      <div className="image-content">
+        <img src={profileImg} alt="Profile" />
       </div>
-    </div>
+    </section>
   );
 };
 

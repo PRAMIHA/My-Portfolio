@@ -5,36 +5,31 @@ const projects = [
   {
     title: "Face Recognition System",
     description:
-      "Personal Chat Room or Workspace to share resources and hang out with friends. Built with React.js, Material-UI, and Firebase. Features include real-time messaging, image sharing, and message reactions.",
-    github: "#",
-    demo: "#",
-    image: "face.jpeg",
+      "An AI-powered system that identifies and verifies individuals using facial recognition techniques.",
+    github: "https://github.com/PRAMIHA/Face_recognition_proj",
+    demo: "https://github.com/PRAMIHA/Face_recognition_proj",
   },
   {
     title: "My Portfolio",
     description:
-      "A personal blog page built with Next.js and Tailwind CSS. It takes content from Markdown files and renders it using Next.js. Supports dark mode and easy Markdown writing.",
-    github: "#",
-    demo: "#",
-    image: "bits-of-code.png",
-  },
-  {
-    title: "Automated ResumeBuilder",
-    description:
-      "An online code and Markdown editor built with React.js. Supports HTML, CSS, and JS with instant preview. Also includes a Markdown editor for README files with toolbar support and local storage auto-save.",
-    github: "#",
-    demo: "#",
-    image: "editorio.png",
+      "A sleek and interactive portfolio showcasing my skills, projects, and achievements in frontend development.",
+    github: "https://github.com/yourusername/portfolio",
+    demo: "https://yourdemo.com/portfolio",
   },
   {
     title: "Go Green App",
     description:
-      "An online code and Markdown editor built with React.js. Supports HTML, CSS, and JS with instant preview. Also includes a Markdown editor for README files with toolbar support and local storage auto-save.",
-    github: "#",
-    demo: "#",
-    image: "editorio.png",
+      "An eco-friendly app promoting sustainable living with features like carbon footprint tracking and green challenges.",
+    github: "https://gogreen-mu.vercel.app/",
+    demo: "https://gogreen-mu.vercel.app/",
   },
-  
+  {
+    title: "Donezo",
+    description:
+      "A to-do list is a simple tool used to organize and track tasks that need to be completed. It helps individuals or teams stay productive by listing tasks in order of priority..",
+    github: "https://task-nine-phi.vercel.app/",
+    demo: "https://task-nine-phi.vercel.app/",
+  },
 ];
 
 const Project = () => {
@@ -45,13 +40,16 @@ const Project = () => {
       </h2>
       <div className="projects-container">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} className="project-image" />
-            <h3 className="project-title">{project.title}</h3>
-            <p className="project-description">{project.description}</p>
-            <div className="project-links">
-              <a href={project.github} className="btn github">GitHub</a>
-              <a href={project.demo} className="btn demo">Demo</a>
+          <div key={index} className="project-card">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="buttons">
+              <a href={project.github} className="btn" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+              <a href={project.demo} className="btn demo" target="_blank" rel="noopener noreferrer">
+                Demo
+              </a>
             </div>
           </div>
         ))}

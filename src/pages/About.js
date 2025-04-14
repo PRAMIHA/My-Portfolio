@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/About.css";
-import coderImage from "../assets/coder.jpg"; // Make sure to place the image in the correct path
+import coderImage from "../assets/coder_transparent.png"; // Make sure to place the image in the correct path
 
 const About = () => {
   return (

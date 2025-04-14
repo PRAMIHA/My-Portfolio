@@ -1,102 +1,59 @@
-/* Home.css */
+/* Home Section Styling */
 .home-container {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(135deg, #090909, #1b1b3a);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10%;
-  color: white;
-  position: relative;
-  overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    background-color: black;
+    color: white;
 }
 
-/* Floating Background Elements */
-.home-container::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  
-  opacity: 0.3;
-  z-index: 0;
+/* Text Content Styling */
+.text-content {
+    flex: 1;
+    max-width: 50%;
 }
 
-.content {
-  z-index: 2;
-  max-width: 600px;
+.text-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.greeting {
-  font-size: 2rem;
+.text-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-.wave {
-  animation: wave-animation 2s infinite;
-  display: inline-block;
+.text-content h2 span {
+    color: #a855f7; /* Purple color */
 }
 
-@keyframes wave-animation {
-  0% { transform: rotate(0); }
-  50% { transform: rotate(20deg); }
-  100% { transform: rotate(0); }
+.text-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
+.resume-btn {
+    padding: 10px 20px;
+    background-color: #a855f7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-top: 10px;
+/* Image Styling */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.typing-text {
-  font-size: 1.8rem;
-  color: #a566ff;
-}
-
-.highlight {
-  color: #a566ff;
-}
-
-/* Call-To-Action Button */
-.cta-button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  color: white;
-  background: #ff5733;
-  cursor: pointer;
-  border-radius: 30px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5);
-}
-
-.cta-button:hover {
-  background: #ff2e00;
-  transform: scale(1.05);
-}
-
-/* Developer Image */
-.image-container {
-  z-index: 2;
-}
-
-.dev-image {
-  width: 400px;
-  animation: float 6s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.image-content img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
 }

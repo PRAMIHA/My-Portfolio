@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    background: rgba(0, 0, 0, 0.8); /* Slight transparency */
+    background: rgba(5, 5, 5, 0.8); /* Slight transparency */
     color: white;
     z-index: 1000; /* Ensures it stays above other elements */
   }
@@ -30,7 +30,7 @@
   }
   
   .navbar a:hover {
-    color: #ff416c;
+    color: #d00736;
   }
 
   

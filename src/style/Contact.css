@@ -1,19 +1,157 @@
-.download-btn {
-    background-color: #6a0dad;
+.contact-section {
+    background-color: #0d0d0d;
     color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 100vh;  /* Covers full page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.download-btn:hover {
-    background-color: #4a0080;
+/* Title */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title span {
+    color: #a855f7;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;  /* Increased for better layout */
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+/* Contact Form */
+.contact-form {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px; /* Slightly larger form */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Input Field Animations */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    top: 5px;
+    font-size: 12px;
+    color: #a855f7;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #a855f7;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #9333ea;
     transform: scale(1.05);
 }
+
+/* Contact Info */
+.contact-info {
+    text-align: left;
+    max-width: 400px;
+    font-size: 18px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 30px;
+    color: #a855f7;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.3);
+}
+
+/* Google Map */
+.map-container {
+    margin-top: 40px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 650px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .map-container iframe {
+        width: 90%;
+        height: 280px;
+    }
+} 

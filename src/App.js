@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar"; // Import the Navbar
+import Navbar from "./components/Navbar"; 
+import bg from './assets/bgp.avif'; 
 import "./style/App.css";
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
     <Router>
       <div className="app">
         {/* Background Animation */}
-        <div className="background-overlay"></div>
+        <div className="background-overlay" style={{ backgroundImage: `url(${bg})` }}></div>
 
         {/* Use Navbar Component Here */}
         <Navbar />  
@@ -32,4 +33,5 @@ const App = () => {
 };
 
 export default App;
+
 
